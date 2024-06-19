@@ -1,17 +1,25 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset some default styles */
+body, h1, h2, p, form, input, button {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background: #f4f4f9;
+    color: #333;
 }
 
 header, footer {
-    background-color: #333;
+    background-color: #0073e6;
     color: white;
     text-align: center;
-    padding: 1em 0;
+    padding: 1rem;
 }
 
 main {
@@ -19,6 +27,7 @@ main {
     padding: 20px;
 }
 
+/* Product list styles */
 .product-list {
     display: flex;
     justify-content: space-around;
@@ -27,17 +36,28 @@ main {
 
 .product {
     text-align: center;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 150px;
 }
 
 .product img {
     max-width: 100%;
     height: auto;
+    border-radius: 5px;
 }
 
+/* Form styles */
 .form-section {
     max-width: 400px;
     margin: 0 auto;
     text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 form {
@@ -47,19 +67,44 @@ form {
 
 label, input, button {
     margin: 10px 0;
-    font-size: 1.2em;
+    font-size: 1rem;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
 }
 
 button {
     padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0073e6;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
+button:hover {
+    background-color: #005bb5;
+}
+
+/* Responsive design */
 @media (max-width: 600px) {
-    header, footer {
-        padding: 0.5em 0;
+    .product-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 80%;
+        margin-bottom: 20px;
     }
 
     label, input, button {
-        font-size: 1em;
+        font-size: 1rem;
     }
 }
